@@ -46,8 +46,6 @@ nav {
   font-family: sans-serif;
 }
 
-
-
 .App .nav-link {
   font-size: 1.8rem;
   color: #f39c12;
@@ -57,12 +55,13 @@ nav {
   border-radius: 5px;
   border: 2px solid transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
-  
 
 }
 
-nav:hover {
-  cursor: url('/Bilder/Maus/Fledermaus.png'), auto;
+nav .nav-link:hover {
+  background-color: #f39c12;
+  color: #1c1c1c;
+  border: 2px solid #f39c12;
 }
 
 nav .nav-link.active {
@@ -114,7 +113,6 @@ nav .nav-link.active {
 
 .character-part:hover {
   transform: scale(1.1);
-  
 }
 
 .text-center {
@@ -144,7 +142,6 @@ button {
 button:hover {
   background-color: #e67e22;
   transform: scale(1.05);
-
 }
 
 @media (max-width: 768px) {

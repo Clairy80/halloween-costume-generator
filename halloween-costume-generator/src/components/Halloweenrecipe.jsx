@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Zurueck from './Zurueck';
 
 function HalloweenRecipe() {
   const [recipes, setRecipes] = useState([]);
@@ -34,15 +35,15 @@ function HalloweenRecipe() {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <img src={recipe.image} alt={recipe.title} style={{ width: '200px' }} />
+                <img src={recipe.image} alt={recipe.title} style={{ width: '200px' }} /> 
               </a>
             </li>
           ))}
         </ul>
       ) : (
         <p>Lade Rezepte...</p>
-      )}
-    </div>
+      )} 
+   <Zurueck />  </div>
   );
 }
 

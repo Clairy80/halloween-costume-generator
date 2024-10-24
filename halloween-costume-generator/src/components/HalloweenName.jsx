@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GruselKnopf from './GruselKnopf';
+import Zurueck from './Zurueck';
 
 function HalloweenName() {
   const [name, setName] = useState(''); // Benutzername
@@ -40,7 +40,7 @@ function HalloweenName() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button onClick={generateHalloweenName}>Generiere Halloween-Namen</button>
+      <button onClick={generateHalloweenName}>Generiere Halloween-Namen</button><Zurueck /> 
       {halloweenName && <p>Dein Halloween-Name ist: {halloweenName}</p>}
     </div>
   );
