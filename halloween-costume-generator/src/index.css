@@ -1,24 +1,133 @@
-.character-part {
-  width: 150px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: #333;
+  font-family: 'Creepster', cursive, sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  color: #e67e22;
+}
+
+.App-header {
+  background-color: #333;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.App-header h1 {
+  font-size: 3rem;
   margin: 10px 0;
+  color: #f39c12;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-body{
-  background-color: black;
-  color: beige;
-font-family: 'Creepster', cursive, sans-serif;
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: 2px solid #f39c12;
+  font-family: sans-serif;
 }
 
-.knöpfchen, .knöpfchen1{
-  background-color: beige;
-  color: black;
-  margin: 20px;
-  border-style: none;
+.App .nav-link {
+  font-size: 1.8rem;
+  color: #f39c12;
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
+nav .nav-link:hover {
+  background-color: #f39c12;
+  color: #1c1c1c;
+  border: 2px solid #f39c12;
+}
+
+nav .nav-link.active {
+  background-color: #e67e22;
+  color: #1c1c1c;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.character-part {
+  width: 200px;
+  height: auto;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.character-part:hover {
+  transform: scale(1.1);
+}
+
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.text-center.mt-3 {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Creepster', cursive;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 15px;
+}
+
+button:hover {
+  background-color: #e67e22;
+  transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
   .character-part {
-    width: 150px; /* Kleinere Breite für mobile Geräte */
+    width: 150px;
+  }
+
+  .text-center {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
